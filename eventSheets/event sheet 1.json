@@ -24,6 +24,36 @@
 				}
 			],
 			"sid": 584569323086296
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Mc",
+					"sid": 899981683162161,
+					"parameters": {
+						"object": "Rock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-forward",
+					"objectClass": "Rock",
+					"sid": 319970890700422,
+					"parameters": {
+						"distance": "2"
+					}
+				}
+			],
+			"sid": 566305231703200
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 259984659204878
 		}
 	],
 	"sid": 334725485858407
