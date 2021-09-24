@@ -29,6 +29,14 @@
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
 		}
 	],
 	"uniqueId": "drbpd9vzg6c",
@@ -36,7 +44,8 @@
 		"items": [
 			"Background",
 			"Door",
-			"Mc"
+			"Mc",
+			"Rock"
 		],
 		"subfolders": []
 	},
