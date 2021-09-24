@@ -24,16 +24,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direction",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
+			"id": "EightDir",
+			"name": "8 Direction",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
