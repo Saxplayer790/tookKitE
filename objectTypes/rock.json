@@ -9,6 +9,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 778889187325108
+		},
+		{
+			"behaviorId": "TileMovement",
+			"name": "TileMovement",
+			"sid": 245863404929576
 		}
 	],
 	"effectTypes": [],
@@ -17,14 +22,34 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 842,
+						"height": 623,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.5321027287319422,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 589351,
+						"imageSpriteId": 7842395,
+						"collisionPoly": {
+							"points": [
+								0.002372475894403665,
+								0,
+								0.5,
+								0,
+								0.9964426966672497,
+								0,
+								0.9964426966672497,
+								0.5321027287319422,
+								0.9964426966672497,
+								1,
+								0.5,
+								1,
+								0.002372475894403665,
+								1,
+								0.002372475894403665,
+								0.5321027287319422
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}

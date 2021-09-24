@@ -187,15 +187,28 @@
 								"enabled": true,
 								"tags": ""
 							}
+						},
+						"TileMovement": {
+							"properties": {
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 100,
+								"speed-y": 100,
+								"enabled": true,
+								"default-controls": false,
+								"isometric": false
+							}
 						}
 					},
 					"world": {
-						"x": 637,
-						"y": 349,
+						"x": 608,
+						"y": 352,
 						"width": 64,
-						"height": 64,
+						"height": 46.3089430894309,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.5321027287319422,
 						"color": [
 							1,
 							1,
