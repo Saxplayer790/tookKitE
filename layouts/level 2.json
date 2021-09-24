@@ -117,15 +117,17 @@
 					"uid": 7,
 					"instanceVariables": {},
 					"behaviors": {
-						"8Direction": {
+						"TileMovement": {
 							"properties": {
-								"max-speed": 350,
-								"acceleration": 600,
-								"deceleration": 500,
-								"directions": "dir-4",
-								"set-angle": "smooth",
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 100,
+								"speed-y": 100,
+								"enabled": true,
 								"default-controls": true,
-								"enabled": true
+								"isometric": false
 							}
 						}
 					},

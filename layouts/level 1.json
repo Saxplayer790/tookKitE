@@ -23,7 +23,7 @@
 					"behaviors": {
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -148,20 +148,22 @@
 					"uid": 6,
 					"instanceVariables": {},
 					"behaviors": {
-						"8Direction": {
+						"TileMovement": {
 							"properties": {
-								"max-speed": 350,
-								"acceleration": 600,
-								"deceleration": 500,
-								"directions": "dir-4",
-								"set-angle": "smooth",
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 150,
+								"speed-y": 150,
+								"enabled": true,
 								"default-controls": true,
-								"enabled": true
+								"isometric": false
 							}
 						}
 					},
 					"world": {
-						"x": 512,
+						"x": 416,
 						"y": 352,
 						"width": 64,
 						"height": 64,
@@ -201,8 +203,8 @@
 								"grid-height": 32,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 100,
-								"speed-y": 100,
+								"speed-x": 150,
+								"speed-y": 150,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -210,12 +212,41 @@
 						}
 					},
 					"world": {
-						"x": 608,
-						"y": 352,
-						"width": 64,
-						"height": 46.3089430894309,
+						"x": 607.8683343728469,
+						"y": 353.7039194891332,
+						"width": 63.73666874569392,
+						"height": 63.73666874569386,
 						"originX": 0.5,
-						"originY": 0.5321027287319422,
+						"originY": 0.5293685756240823,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Hole",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 512,
+						"y": 192,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

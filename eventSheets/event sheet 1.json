@@ -31,29 +31,402 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Mc",
-					"sid": 899981683162161,
+					"sid": 477006236693429,
 					"parameters": {
-						"object": "Rock"
+						"object": "Hole"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "move-forward",
-					"objectClass": "Rock",
-					"sid": 319970890700422,
-					"parameters": {
-						"distance": "2"
-					}
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 171488203759798
 				}
 			],
-			"sid": 566305231703200
+			"sid": 168267826739885
 		},
 		{
-			"eventType": "block",
-			"conditions": [],
-			"actions": [],
-			"sid": 259984659204878
+			"eventType": "group",
+			"disabled": false,
+			"title": "Move Player and Box",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Rock",
+							"sid": 818075655199437,
+							"behaviorType": "TileMovement",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Rock",
+							"sid": 521041474203355,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 811591133273131
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Mc",
+							"sid": 654121397967410,
+							"behaviorType": "TileMovement",
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 635856177697284,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 686499916624186,
+									"parameters": {
+										"key": 39
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Mc",
+									"sid": 990483039720622,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 613665139805243,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-enabled",
+											"objectClass": "Rock",
+											"sid": 350762714599741,
+											"behaviorType": "Solid"
+										},
+										{
+											"id": "is-overlapping-at-offset",
+											"objectClass": "Mc",
+											"sid": 900285395849514,
+											"parameters": {
+												"object": "Rock",
+												"offset-x": "15",
+												"offset-y": "0"
+											}
+										},
+										{
+											"id": "can-move-direction",
+											"objectClass": "Rock",
+											"sid": 489661135716173,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"direction": "right",
+												"distance": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Rock",
+											"sid": 611789584265731,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Rock",
+											"sid": 232905614185743,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 765619992901532
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 895898333488244
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 537931104309796,
+									"parameters": {
+										"key": 37
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Mc",
+									"sid": 341377811738559,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 392189995721471,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-enabled",
+											"objectClass": "Rock",
+											"sid": 651362917456284,
+											"behaviorType": "Solid"
+										},
+										{
+											"id": "is-overlapping-at-offset",
+											"objectClass": "Mc",
+											"sid": 577020870818470,
+											"parameters": {
+												"object": "Rock",
+												"offset-x": "-15",
+												"offset-y": "0"
+											}
+										},
+										{
+											"id": "can-move-direction",
+											"objectClass": "Rock",
+											"sid": 592420242819816,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"direction": "left",
+												"distance": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Rock",
+											"sid": 469893950725622,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Rock",
+											"sid": 855851176831858,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 769691747904157
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 179932702950468
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 566257075515268,
+									"parameters": {
+										"key": 40
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Mc",
+									"sid": 383102912623871,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 623981681721098,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-enabled",
+											"objectClass": "Rock",
+											"sid": 552188885611633,
+											"behaviorType": "Solid"
+										},
+										{
+											"id": "is-overlapping-at-offset",
+											"objectClass": "Mc",
+											"sid": 167633826195257,
+											"parameters": {
+												"object": "Rock",
+												"offset-x": "0",
+												"offset-y": "15"
+											}
+										},
+										{
+											"id": "can-move-direction",
+											"objectClass": "Rock",
+											"sid": 317908533978747,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"direction": "down",
+												"distance": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Rock",
+											"sid": 380628095570809,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Rock",
+											"sid": 446154385438665,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"control": "down"
+											}
+										}
+									],
+									"sid": 885706005379375
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 649313144747539
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 506653225452136,
+									"parameters": {
+										"key": 38
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Mc",
+									"sid": 573646472894352,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 648549488865259,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-enabled",
+											"objectClass": "Rock",
+											"sid": 801238966853609,
+											"behaviorType": "Solid"
+										},
+										{
+											"id": "is-overlapping-at-offset",
+											"objectClass": "Mc",
+											"sid": 245415769827954,
+											"parameters": {
+												"object": "Rock",
+												"offset-x": "0",
+												"offset-y": "-15"
+											}
+										},
+										{
+											"id": "can-move-direction",
+											"objectClass": "Rock",
+											"sid": 969227819307687,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"direction": "up",
+												"distance": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Rock",
+											"sid": 428102134419723,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "Rock",
+											"sid": 740400302321680,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"control": "up"
+											}
+										}
+									],
+									"sid": 191801143263223
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 190203947207365
 		}
 	],
 	"sid": 334725485858407

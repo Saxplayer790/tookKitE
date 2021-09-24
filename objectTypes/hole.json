@@ -1,35 +1,49 @@
 {
-	"name": "Mc",
+	"name": "Hole",
 	"plugin-id": "Sprite",
-	"sid": 572156588130880,
+	"sid": 715565294803071,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "TileMovement",
-			"name": "TileMovement",
-			"sid": 344921981759076
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 422,
+						"height": 422,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 77538,
+						"imageSpriteId": 607376,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								1,
+								0,
+								1,
+								0.5,
+								1,
+								1,
+								0.5,
+								1,
+								0,
+								1,
+								0,
+								0.5
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 979551884030439,
+				"sid": 371797612769450,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

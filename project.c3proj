@@ -23,17 +23,17 @@
 			"bundled": false
 		},
 		{
-			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direction",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -53,7 +53,9 @@
 			"Background",
 			"Door",
 			"Mc",
-			"Rock"
+			"Rock",
+			"Hole",
+			"Keyboard"
 		],
 		"subfolders": []
 	},
