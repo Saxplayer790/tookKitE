@@ -1,5 +1,30 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Mc",
+					"sid": 365889309166319,
+					"parameters": {
+						"object": "Door"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 150927995290919,
+					"parameters": {
+						"which": "next"
+					}
+				}
+			],
+			"sid": 584569323086296
+		}
+	],
 	"sid": 334725485858407
 }
