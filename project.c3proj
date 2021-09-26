@@ -48,8 +48,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "MoveTo",
-			"name": "Move To",
+			"id": "Bullet",
+			"name": "Bullet",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -67,8 +67,7 @@
 			"Button",
 			"Background",
 			"Dispenser",
-			"Arrow",
-			"Arrow2"
+			"Arrow"
 		],
 		"subfolders": []
 	},

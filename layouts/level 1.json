@@ -210,74 +210,21 @@
 					"uid": 17,
 					"instanceVariables": {},
 					"behaviors": {
-						"MoveTo": {
+						"Bullet": {
 							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
 								"set-angle": true,
-								"stop-on-solids": false,
+								"step": false,
 								"enabled": true
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
 							}
 						}
 					},
 					"world": {
-						"x": 298.52804754306084,
-						"y": 103.83104169737203,
-						"width": 79.25758280726872,
-						"height": 19.81439570181718,
-						"originX": 0.5,
-						"originY": 0.48,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 1.5707963267948966,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Arrow2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 18,
-					"instanceVariables": {},
-					"behaviors": {
-						"MoveTo": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": true,
-								"stop-on-solids": false,
-								"enabled": true
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 298.84490941575734,
-						"y": 103.30488018950149,
+						"x": 288.61069217115994,
+						"y": -53.19375169105807,
 						"width": 79.25758280726872,
 						"height": 19.81439570181718,
 						"originX": 0.5,
@@ -546,12 +493,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 304.1121501438996,
-						"y": 112.81818181818183,
+						"x": 289.2361170860484,
+						"y": 129.34710743801656,
 						"width": 97.53959434804915,
 						"height": 132.54104742192385,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5153061224489796,
+						"originY": 0.6445556946182729,
 						"color": [
 							1,
 							1,

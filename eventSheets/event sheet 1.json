@@ -496,55 +496,62 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 268553418653784
+							"sid": 784594116023465,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-visible",
-							"objectClass": "Arrow2",
-							"sid": 787026918023381,
+							"id": "spawn-another-object",
+							"objectClass": "Dispenser",
+							"sid": 336876850861047,
 							"parameters": {
-								"visibility": "invisible"
+								"object": "Arrow",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
 							}
 						}
 					],
-					"sid": 695407344503872
+					"sid": 844434326832670
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 616241273011093
+							"id": "on-created",
+							"objectClass": "Arrow",
+							"sid": 822241659257191
 						}
 					],
 					"actions": [
 						{
-							"id": "move-to-position",
+							"id": "set-angle",
 							"objectClass": "Arrow",
-							"sid": 787849842591465,
-							"behaviorType": "MoveTo",
+							"sid": 168390553177239,
 							"parameters": {
-								"x": "arrow.X",
-								"y": "672",
-								"mode": "direct"
+								"angle": "90"
 							}
 						},
 						{
-							"id": "set-enabled",
-							"objectClass": "Arrow",
-							"sid": 883341147379670,
-							"behaviorType": "Solid",
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 297679151417038,
 							"parameters": {
-								"state": "disabled"
+								"seconds": "1.5"
 							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Arrow",
+							"sid": 925752805058358
 						}
 					],
-					"sid": 469096240578566
+					"sid": 515040331441852
 				},
 				{
 					"eventType": "block",
@@ -552,7 +559,7 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Arrow",
-							"sid": 445754220757480,
+							"sid": 365262766778676,
 							"parameters": {
 								"object": "Walls"
 							}
@@ -560,45 +567,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-enabled",
+							"id": "destroy",
 							"objectClass": "Arrow",
-							"sid": 962295440061511,
-							"behaviorType": "Solid",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Arrow",
-							"sid": 679022301660804,
-							"parameters": {
-								"x": "Arrow.X",
-								"y": "Arrow.Y"
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 465962464425982,
-							"parameters": {
-								"object-to-create": "Arrow2",
-								"layer": "0",
-								"x": "Arrow.X",
-								"y": "Arrow.Y",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Arrow2",
-							"sid": 396333165876513,
-							"parameters": {
-								"visibility": "visible"
-							}
+							"sid": 307872984821273
 						}
 					],
-					"sid": 285137041597804
+					"sid": 859289910077007
 				}
 			],
 			"sid": 609538257710870
