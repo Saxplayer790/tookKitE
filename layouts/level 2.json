@@ -6,7 +6,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Background",
+					"type": "Walls",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -91,8 +91,8 @@
 					"world": {
 						"x": 1216,
 						"y": 608,
-						"width": 96,
-						"height": 192,
+						"width": 124.416,
+						"height": 394.752,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

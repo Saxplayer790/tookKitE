@@ -45,17 +45,30 @@
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
 		}
 	],
 	"uniqueId": "drbpd9vzg6c",
 	"objectTypes": {
 		"items": [
-			"Background",
+			"Walls",
 			"Door",
 			"Mc",
 			"Rock",
 			"Hole",
-			"Keyboard"
+			"Keyboard",
+			"Button",
+			"Background",
+			"Dispenser",
+			"Arrow",
+			"Arrow2"
 		],
 		"subfolders": []
 	},

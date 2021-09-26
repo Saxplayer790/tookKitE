@@ -26,30 +26,9 @@
 			"sid": 584569323086296
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Mc",
-					"sid": 477006236693429,
-					"parameters": {
-						"object": "Hole"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 171488203759798
-				}
-			],
-			"sid": 168267826739885
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Move Player and Box",
+			"title": "Move Player and Rock",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -427,6 +406,202 @@
 				}
 			],
 			"sid": 190203947207365
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "Rock",
+					"sid": 613225660414050,
+					"parameters": {
+						"object": "Hole",
+						"offset-x": "-45",
+						"offset-y": "-45"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Hole",
+					"sid": 534498801149841
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Rock",
+					"sid": 937477822843948,
+					"parameters": {
+						"object": "Hole",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Rock",
+					"sid": 561724278981458,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				}
+			],
+			"sid": 502700292030357
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "Mc",
+					"sid": 697842028055939,
+					"parameters": {
+						"object": "Hole",
+						"offset-x": "-30",
+						"offset-y": "-30"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 693722826904150
+				}
+			],
+			"sid": 858194902876801
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Mc",
+					"sid": 857082614822617,
+					"parameters": {
+						"object": "Button"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 503950872938644
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Arrows",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 268553418653784
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Arrow2",
+							"sid": 787026918023381,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 695407344503872
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 616241273011093
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-position",
+							"objectClass": "Arrow",
+							"sid": 787849842591465,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "arrow.X",
+								"y": "672",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Arrow",
+							"sid": 883341147379670,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 469096240578566
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Arrow",
+							"sid": 445754220757480,
+							"parameters": {
+								"object": "Walls"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Arrow",
+							"sid": 962295440061511,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Arrow",
+							"sid": 679022301660804,
+							"parameters": {
+								"x": "Arrow.X",
+								"y": "Arrow.Y"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 465962464425982,
+							"parameters": {
+								"object-to-create": "Arrow2",
+								"layer": "0",
+								"x": "Arrow.X",
+								"y": "Arrow.Y",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Arrow2",
+							"sid": 396333165876513,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 285137041597804
+				}
+			],
+			"sid": 609538257710870
 		}
 	],
 	"sid": 334725485858407

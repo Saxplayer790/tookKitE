@@ -1,10 +1,16 @@
 {
-	"name": "Background",
+	"name": "Walls",
 	"plugin-id": "TiledBg",
-	"sid": 390600280073386,
+	"sid": 403030133213177,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 991341785301150
+		}
+	],
 	"effectTypes": [],
 	"image": {
 		"width": 250,
@@ -14,7 +20,7 @@
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 9180132,
+		"imageSpriteId": 854167,
 		"useCollisionPoly": true
 	}
 }
