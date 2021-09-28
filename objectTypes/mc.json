@@ -24,7 +24,19 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 77538,
+						"imageSpriteId": 1287602,
+						"collisionPoly": {
+							"points": [
+								0.14799987792968747,
+								0.11999999999999997,
+								0.6999999999999997,
+								0.11600006103515628,
+								0.8599999999999999,
+								0.9440000915527343,
+								0.09199981689453127,
+								0.9160000610351562
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
