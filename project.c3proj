@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -67,7 +75,8 @@
 			"Button",
 			"Background",
 			"Dispenser",
-			"Arrow"
+			"Arrow",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -96,7 +105,18 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "mixkit-old-church-door-open-193.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 234836032576511
+				},
+				{
+					"name": "Rock_Moving_Sound_Effect_HD.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 575091918036407
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

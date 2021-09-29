@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 740276530231617,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "RockSound",
+			"type": "number",
+			"desc": "",
+			"sid": 566283800820965
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",

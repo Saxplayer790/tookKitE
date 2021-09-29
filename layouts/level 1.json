@@ -338,7 +338,9 @@
 						"live-preview": false
 					},
 					"uid": 8,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"RockSound": 0
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
@@ -352,8 +354,8 @@
 								"grid-height": 32,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 150,
-								"speed-y": 150,
+								"speed-x": 200,
+								"speed-y": 200,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -455,8 +457,8 @@
 								"grid-height": 32,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 150,
-								"speed-y": 150,
+								"speed-x": 200,
+								"speed-y": 200,
 								"enabled": true,
 								"default-controls": true,
 								"isometric": false
