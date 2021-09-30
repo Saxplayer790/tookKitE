@@ -339,7 +339,7 @@
 					},
 					"uid": 8,
 					"instanceVariables": {
-						"RockSound": 0
+						"RockSound": true
 					},
 					"behaviors": {
 						"Solid": {
@@ -389,7 +389,9 @@
 						"live-preview": false
 					},
 					"uid": 14,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Button": false
+					},
 					"behaviors": {},
 					"world": {
 						"x": 129,

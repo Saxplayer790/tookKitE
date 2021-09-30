@@ -6,7 +6,7 @@
 	"instanceVariables": [
 		{
 			"name": "RockSound",
-			"type": "number",
+			"type": "boolean",
 			"desc": "",
 			"sid": 566283800820965
 		}

@@ -52,14 +52,6 @@
 							"parameters": {
 								"state": "enabled"
 							}
-						},
-						{
-							"id": "stop",
-							"objectClass": "Audio",
-							"sid": 380345942984171,
-							"parameters": {
-								"tag": "\"RockSound\""
-							}
 						}
 					],
 					"sid": 811591133273131
@@ -151,17 +143,6 @@
 											"parameters": {
 												"control": "right"
 											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 888164730741220,
-											"parameters": {
-												"audio-file": "Rock_Moving_Sound_Effect_HD",
-												"loop": "not-looping",
-												"volume": "-5",
-												"tag-optional": "\"\""
-											}
 										}
 									],
 									"sid": 765619992901532
@@ -247,17 +228,6 @@
 											"parameters": {
 												"control": "left"
 											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 995907893956027,
-											"parameters": {
-												"audio-file": "Rock_Moving_Sound_Effect_HD",
-												"loop": "not-looping",
-												"volume": "-5",
-												"tag-optional": "\"\""
-											}
 										}
 									],
 									"sid": 769691747904157
@@ -342,17 +312,6 @@
 											"parameters": {
 												"control": "down"
 											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 691198032948399,
-											"parameters": {
-												"audio-file": "Rock_Moving_Sound_Effect_HD",
-												"loop": "not-looping",
-												"volume": "-5",
-												"tag-optional": "\"\""
-											}
 										}
 									],
 									"sid": 885706005379375
@@ -436,17 +395,6 @@
 											"behaviorType": "TileMovement",
 											"parameters": {
 												"control": "up"
-											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 108100250584211,
-											"parameters": {
-												"audio-file": "Rock_Moving_Sound_Effect_HD",
-												"loop": "not-looping",
-												"volume": "-5",
-												"tag-optional": "\"\""
 											}
 										}
 									],
@@ -548,10 +496,19 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 784594116023465,
+							"sid": 516120942323809,
 							"parameters": {
-								"interval-seconds": "1.0"
+								"interval-seconds": "1.5"
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Button",
+							"sid": 759364558033233,
+							"parameters": {
+								"instance-variable": "Button"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -631,15 +588,50 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-overlapping-another-object",
+					"id": "on-collision-with-another-object",
 					"objectClass": "Mc",
-					"sid": 907121818532872,
+					"sid": 250556735005206,
 					"parameters": {
 						"object": "Button"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Button",
+					"sid": 835519939543000,
+					"parameters": {
+						"instance-variable": "Button"
+					},
+					"isInverted": true
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Button",
+					"sid": 346554897215078,
+					"parameters": {
+						"instance-variable": "Button",
+						"value": "true"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Arrow",
+					"sid": 936609736408952
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 139569830948868,
+					"parameters": {
+						"audio-file": "ButtonPress2",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"\""
+					}
+				}
+			],
 			"sid": 612362895243383
 		}
 	],
