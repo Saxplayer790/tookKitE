@@ -88,7 +88,19 @@
 							"isInverted": true
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 846056341926597,
+							"parameters": {
+								"audio-file": "Rock_Moving_Sound_Effect_HD",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"RockSound\""
+							}
+						}
+					],
 					"sid": 635856177697284,
 					"children": [
 						{
