@@ -1035,6 +1035,27 @@
 						}
 					],
 					"sid": 469968247848842
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Mc",
+							"sid": 326601623182802,
+							"parameters": {
+								"object": "Laser"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 869441332089906
+						}
+					],
+					"sid": 198592863179994
 				}
 			],
 			"sid": 166756814612212
