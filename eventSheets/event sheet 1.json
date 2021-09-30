@@ -5,6 +5,27 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 633013360705281
+				}
+			],
+			"actions": [
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Door",
+					"sid": 327498269631992,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				}
+			],
+			"sid": 219766041811804
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Mc",
 					"sid": 365889309166319,
@@ -419,6 +440,15 @@
 						"offset-x": "-45",
 						"offset-y": "-45"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Hole",
+					"sid": 380827705679190,
+					"parameters": {
+						"instance-variable": "RockOverHole"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -442,6 +472,23 @@
 					"sid": 561724278981458,
 					"parameters": {
 						"collisions": "disabled"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Hole",
+					"sid": 569166045837800,
+					"parameters": {
+						"instance-variable": "RockOverHole",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Door",
+					"sid": 879021393973450,
+					"parameters": {
+						"collisions": "enabled"
 					}
 				},
 				{

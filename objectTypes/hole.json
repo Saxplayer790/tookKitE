@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 715565294803071,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "RockOverHole",
+			"type": "boolean",
+			"desc": "",
+			"sid": 179571370972420
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
