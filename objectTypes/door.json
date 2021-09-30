@@ -44,7 +44,50 @@
 					}
 				],
 				"sid": 235957500215186,
-				"name": "Animation 1",
+				"name": "DoorClosed",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 724,
+						"height": 1290,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1386409,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9986187845303868,
+								0,
+								0.9986187845303868,
+								0.5,
+								0.9986187845303868,
+								0.9992248062015504,
+								0.5,
+								0.9992248062015504,
+								0,
+								0.9992248062015504,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 307315906311455,
+				"name": "DoorOpen",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

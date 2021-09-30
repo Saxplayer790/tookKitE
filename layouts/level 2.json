@@ -80,7 +80,7 @@
 					"type": "Door",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "DoorClosed",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -134,10 +134,10 @@
 					"world": {
 						"x": 96,
 						"y": 608,
-						"width": 64,
-						"height": 64,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 51.2,
+						"height": 55.04,
+						"originX": 0.51,
+						"originY": 0.4744186046511628,
 						"color": [
 							1,
 							1,

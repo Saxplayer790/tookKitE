@@ -380,8 +380,8 @@
 						"y": 748,
 						"width": 91.65729460219549,
 						"height": 98.3500921040885,
-						"originX": 0.47896039603960394,
-						"originY": 0.1580161476355248,
+						"originX": 0.4814356435643564,
+						"originY": 0.1395617070357555,
 						"color": [
 							1,
 							1,
@@ -463,12 +463,12 @@
 						}
 					},
 					"world": {
-						"x": 527,
-						"y": 1039,
-						"width": 28.551818929396433,
-						"height": 28.551818929396433,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 519,
+						"y": 919,
+						"width": 61.87688528619618,
+						"height": 19.311894133908364,
+						"originX": 0.554140127388535,
+						"originY": 0.7142857142857143,
 						"color": [
 							1,
 							1,
@@ -544,7 +544,7 @@
 					"type": "Door",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "DoorClosed",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -705,10 +705,10 @@
 					"world": {
 						"x": 704,
 						"y": 354,
-						"width": 63.73666874569392,
-						"height": 63.73666874569386,
-						"originX": 0.5,
-						"originY": 0.5293685756240823,
+						"width": 61.87469864750511,
+						"height": 60.18014391113238,
+						"originX": 0.4965277777777778,
+						"originY": 0.5171073094867809,
 						"color": [
 							1,
 							1,
@@ -779,10 +779,10 @@
 					"world": {
 						"x": 127.68301345536507,
 						"y": 351.2679461785398,
-						"width": 64,
-						"height": 64,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 51.2,
+						"height": 55.04,
+						"originX": 0.51,
+						"originY": 0.4744186046511628,
 						"color": [
 							1,
 							1,

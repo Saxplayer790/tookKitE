@@ -47,6 +47,28 @@
 			"sid": 584569323086296
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "collisions-enabled",
+					"objectClass": "Door",
+					"sid": 992977626103682
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Door",
+					"sid": 898621561888689,
+					"parameters": {
+						"animation": "\"DoorOpen\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 811587803333188
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Move Player and Rock",
@@ -148,10 +170,10 @@
 										{
 											"id": "is-overlapping-at-offset",
 											"objectClass": "Mc",
-											"sid": 900285395849514,
+											"sid": 159274941078794,
 											"parameters": {
 												"object": "Rock",
-												"offset-x": "15",
+												"offset-x": "17",
 												"offset-y": "0"
 											}
 										},
@@ -233,10 +255,10 @@
 										{
 											"id": "is-overlapping-at-offset",
 											"objectClass": "Mc",
-											"sid": 577020870818470,
+											"sid": 689812714853057,
 											"parameters": {
 												"object": "Rock",
-												"offset-x": "-15",
+												"offset-x": "-17",
 												"offset-y": "0"
 											}
 										},
@@ -317,11 +339,11 @@
 										{
 											"id": "is-overlapping-at-offset",
 											"objectClass": "Mc",
-											"sid": 167633826195257,
+											"sid": 640368434237579,
 											"parameters": {
 												"object": "Rock",
 												"offset-x": "0",
-												"offset-y": "15"
+												"offset-y": "17"
 											}
 										},
 										{
@@ -401,11 +423,11 @@
 										{
 											"id": "is-overlapping-at-offset",
 											"objectClass": "Mc",
-											"sid": 245415769827954,
+											"sid": 449580178491216,
 											"parameters": {
 												"object": "Rock",
 												"offset-x": "0",
-												"offset-y": "-15"
+												"offset-y": "-17"
 											}
 										},
 										{
@@ -607,32 +629,7 @@
 							}
 						}
 					],
-					"sid": 346142151428334,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-flashing",
-									"objectClass": "Rock",
-									"sid": 355678345883573,
-									"behaviorType": "Flash"
-								}
-							],
-							"actions": [
-								{
-									"id": "set-enabled",
-									"objectClass": "Rock",
-									"sid": 513200817783148,
-									"behaviorType": "Solid",
-									"parameters": {
-										"state": "disabled"
-									}
-								}
-							],
-							"sid": 173891139469501
-						}
-					]
+					"sid": 346142151428334
 				},
 				{
 					"eventType": "block",
@@ -687,28 +684,6 @@
 							"sid": 269747927770209
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-destroyed",
-							"objectClass": "Rock",
-							"sid": 491136649179881
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "Walls",
-							"sid": 572546013136633,
-							"behaviorType": "Solid",
-							"parameters": {
-								"state": "disabled"
-							}
-						}
-					],
-					"sid": 736246221155375
 				}
 			],
 			"sid": 636434325431842
@@ -986,10 +961,12 @@
 							"isInverted": true
 						},
 						{
-							"id": "is-enabled",
-							"objectClass": "Laser",
-							"sid": 999205071127236,
-							"behaviorType": "Bullet"
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 743723103090637,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
 						}
 					],
 					"actions": [
@@ -1061,6 +1038,50 @@
 				}
 			],
 			"sid": 166756814612212
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 527117492257932,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 300088276006837
+				}
+			],
+			"sid": 291600650202165
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "Mc",
+					"sid": 527926530840816,
+					"parameters": {
+						"object": "BoobyTrap",
+						"offset-x": "-15",
+						"offset-y": "-15"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 378983672531052
+				}
+			],
+			"sid": 338169929395352
 		}
 	],
 	"sid": 334725485858407
