@@ -73,6 +73,14 @@
 							"parameters": {
 								"state": "enabled"
 							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 459189046370337,
+							"parameters": {
+								"tag": "\"RockSound\""
+							}
 						}
 					],
 					"sid": 811591133273131
@@ -92,9 +100,9 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 846056341926597,
+							"sid": 408897949903894,
 							"parameters": {
-								"audio-file": "Rock_Moving_Sound_Effect_HD",
+								"audio-file": "RockPushEdit",
 								"loop": "not-looping",
 								"volume": "-5",
 								"tag-optional": "\"RockSound\""
