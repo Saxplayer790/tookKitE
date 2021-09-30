@@ -76,7 +76,10 @@
 			"Background",
 			"Dispenser",
 			"Arrow",
-			"Audio"
+			"Audio",
+			"Laser",
+			"Button2",
+			"Dispenser2"
 		],
 		"subfolders": []
 	},

@@ -17,7 +17,7 @@
 				{
 					"id": "go-to-nextprevious-layout",
 					"objectClass": "System",
-					"sid": 150927995290919,
+					"sid": 962265079110718,
 					"parameters": {
 						"which": "next"
 					}
@@ -585,22 +585,173 @@
 			"sid": 609538257710870
 		},
 		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Button",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Mc",
+							"sid": 331673541939503,
+							"parameters": {
+								"object": "Button"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Button",
+							"sid": 699197032805338,
+							"parameters": {
+								"instance-variable": "Button"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Button",
+							"sid": 250635484823170,
+							"parameters": {
+								"instance-variable": "Button",
+								"value": "true"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Arrow",
+							"sid": 691868886255918
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 678775804217694,
+							"parameters": {
+								"audio-file": "ButtonPress2",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 706311105630135
+				}
+			],
+			"sid": 544695971488682
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 580959351650008,
+					"parameters": {
+						"interval-seconds": "1.5"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Button2",
+					"sid": 539948414740448,
+					"parameters": {
+						"instance-variable": "Button2"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Dispenser2",
+					"sid": 941622221512340,
+					"parameters": {
+						"object": "Laser",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 801174254661286
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Laser",
+					"sid": 189762948678044
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Laser",
+					"sid": 867499327152598,
+					"parameters": {
+						"angle": "270"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 439444361558057,
+					"parameters": {
+						"seconds": "1.5"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Laser",
+					"sid": 226095199067256
+				}
+			],
+			"sid": 214050546458158
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Laser",
+					"sid": 362976047368128,
+					"parameters": {
+						"object": "Walls"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Laser",
+					"sid": 939196231463715
+				}
+			],
+			"sid": 245685711743255
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Mc",
-					"sid": 250556735005206,
+					"sid": 607063440130076,
 					"parameters": {
-						"object": "Button"
+						"object": "Button2"
 					}
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Button",
-					"sid": 835519939543000,
+					"objectClass": "Button2",
+					"sid": 462833782035817,
 					"parameters": {
-						"instance-variable": "Button"
+						"instance-variable": "Button2"
 					},
 					"isInverted": true
 				}
@@ -608,22 +759,22 @@
 			"actions": [
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "Button",
-					"sid": 346554897215078,
+					"objectClass": "Button2",
+					"sid": 666824523225938,
 					"parameters": {
-						"instance-variable": "Button",
+						"instance-variable": "Button2",
 						"value": "true"
 					}
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Arrow",
-					"sid": 936609736408952
+					"objectClass": "Laser",
+					"sid": 706724448107479
 				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 139569830948868,
+					"sid": 112771627762925,
 					"parameters": {
 						"audio-file": "ButtonPress2",
 						"loop": "not-looping",
@@ -632,7 +783,7 @@
 					}
 				}
 			],
-			"sid": 612362895243383
+			"sid": 549788925651543
 		}
 	],
 	"sid": 334725485858407
