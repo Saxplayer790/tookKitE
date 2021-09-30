@@ -449,106 +449,269 @@
 			"sid": 190203947207365
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-at-offset",
-					"objectClass": "Rock",
-					"sid": 613225660414050,
-					"parameters": {
-						"object": "Hole",
-						"offset-x": "-45",
-						"offset-y": "-45"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Hole",
-					"sid": 380827705679190,
-					"parameters": {
-						"instance-variable": "RockOverHole"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "Hole",
-					"sid": 534498801149841
-				},
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "Rock",
-					"sid": 937477822843948,
-					"parameters": {
-						"object": "Hole",
-						"image-point-optional": "0"
-					}
-				},
-				{
-					"id": "set-collisions-enabled",
-					"objectClass": "Rock",
-					"sid": 561724278981458,
-					"parameters": {
-						"collisions": "disabled"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Hole",
-					"sid": 569166045837800,
-					"parameters": {
-						"instance-variable": "RockOverHole",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-collisions-enabled",
-					"objectClass": "Door",
-					"sid": 879021393973450,
-					"parameters": {
-						"collisions": "enabled"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 778544693536969,
-					"parameters": {
-						"audio-file": "mixkit-old-church-door-open-193",
-						"loop": "not-looping",
-						"volume": "-5",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 502700292030357,
+			"eventType": "group",
+			"disabled": false,
+			"title": "Rock",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "is-overlapping-at-offset",
-							"objectClass": "Mc",
-							"sid": 806331256718708,
+							"objectClass": "Rock",
+							"sid": 425464818091774,
 							"parameters": {
 								"object": "Hole",
-								"offset-x": "-30",
-								"offset-y": "-30"
+								"offset-x": "-45",
+								"offset-y": "-45"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Hole",
+							"sid": 999857919198737,
+							"parameters": {
+								"instance-variable": "RockOverHole"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Hole",
+							"sid": 665361474533803
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Rock",
+							"sid": 369255745576530,
+							"parameters": {
+								"object": "Hole",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Rock",
+							"sid": 527566208973274,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Hole",
+							"sid": 766126028191215,
+							"parameters": {
+								"instance-variable": "RockOverHole",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Door",
+							"sid": 184900812396739,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 966166856063601,
+							"parameters": {
+								"audio-file": "mixkit-old-church-door-open-193",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 225461583710824,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "Mc",
+									"sid": 849164943965298,
+									"parameters": {
+										"object": "Hole",
+										"offset-x": "-30",
+										"offset-y": "-30"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 352676165445179
+								}
+							],
+							"sid": 270285831013985
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Laser",
+							"sid": 557916554980765,
+							"parameters": {
+								"object": "Rock"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "restart-layout",
+							"id": "destroy",
+							"objectClass": "Rock",
+							"sid": 465045267477026
+						},
+						{
+							"id": "wait",
 							"objectClass": "System",
-							"sid": 128449051304826
+							"sid": 620631848707647,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 323419771973854,
+							"parameters": {
+								"object-to-create": "Rock",
+								"layer": "Rock.LayerNumber",
+								"x": "704",
+								"y": "354",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Rock",
+							"sid": 629931075456984,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "3"
+							}
 						}
 					],
-					"sid": 259394534833687
+					"sid": 346142151428334,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-flashing",
+									"objectClass": "Rock",
+									"sid": 355678345883573,
+									"behaviorType": "Flash"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Rock",
+									"sid": 513200817783148,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 173891139469501
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Arrow",
+							"sid": 694706962633799,
+							"parameters": {
+								"object": "Rock"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Arrow",
+							"sid": 914216081802270,
+							"parameters": {
+								"instance-variable": "Arrow",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 926917399527717,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Arrow",
+									"sid": 706211253246756,
+									"parameters": {
+										"instance-variable": "Arrow",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Arrow",
+									"sid": 583835879429058,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 269747927770209
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "Rock",
+							"sid": 491136649179881
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Walls",
+							"sid": 572546013136633,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 736246221155375
 				}
-			]
+			],
+			"sid": 636434325431842
 		},
 		{
 			"eventType": "group",
@@ -561,11 +724,11 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 516120942323809,
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Dispenser",
+							"sid": 224859484291174,
 							"parameters": {
-								"interval-seconds": "1.5"
+								"instance-variable": "Shoot"
 							}
 						},
 						{
@@ -576,16 +739,24 @@
 								"instance-variable": "Button"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 191443205726126,
+							"parameters": {
+								"interval-seconds": "0.5"
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Dispenser",
-							"sid": 336876850861047,
+							"sid": 132001239081199,
 							"parameters": {
 								"object": "Arrow",
-								"layer": "0",
+								"layer": "2",
 								"image-point": "0",
 								"create-hierarchy": false
 							}
@@ -604,25 +775,22 @@
 					],
 					"actions": [
 						{
-							"id": "set-angle",
+							"id": "set-angle-of-motion",
 							"objectClass": "Arrow",
-							"sid": 511500174916863,
+							"sid": 156659259162653,
+							"behaviorType": "Bullet",
 							"parameters": {
 								"angle": "90"
 							}
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 537463347263448,
-							"parameters": {
-								"seconds": "1.5"
-							}
-						},
-						{
-							"id": "destroy",
+							"id": "set-speed",
 							"objectClass": "Arrow",
-							"sid": 474158044237855
+							"sid": 514085624330809,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "300"
+							}
 						}
 					],
 					"sid": 557955789775345
@@ -647,6 +815,27 @@
 						}
 					],
 					"sid": 309472163486404
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Arrow",
+							"sid": 303064433331810,
+							"parameters": {
+								"object": "Mc"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 623429578949717
+						}
+					],
+					"sid": 214469224951822
 				}
 			],
 			"sid": 609538257710870
@@ -690,167 +879,188 @@
 							}
 						},
 						{
-							"id": "destroy",
-							"objectClass": "Arrow",
-							"sid": 691868886255918
+							"id": "set-boolean-instvar",
+							"objectClass": "Dispenser",
+							"sid": 837432576033701,
+							"parameters": {
+								"instance-variable": "Shoot",
+								"value": "false"
+							}
 						},
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 678775804217694,
+							"sid": 564662723947423,
 							"parameters": {
 								"audio-file": "ButtonPress2",
 								"loop": "not-looping",
 								"volume": "-5",
-								"tag-optional": "\"\""
+								"tag-optional": "\"ButtonSound\""
 							}
 						}
 					],
 					"sid": 706311105630135
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Mc",
+							"sid": 431121490415690,
+							"parameters": {
+								"object": "Button2"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Button2",
+							"sid": 663319065095749,
+							"parameters": {
+								"instance-variable": "Button2"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Button2",
+							"sid": 336867164745127,
+							"parameters": {
+								"instance-variable": "Button2",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 591263110436032,
+							"parameters": {
+								"audio-file": "ButtonPress2",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"ButtonSound\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Dispencer2",
+							"sid": 843482936857316,
+							"parameters": {
+								"instance-variable": "Beam",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 259120612907457
 				}
 			],
 			"sid": 544695971488682
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Laser",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 580959351650008,
-					"parameters": {
-						"interval-seconds": "1.5"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Dispencer2",
+							"sid": 802191385787664,
+							"parameters": {
+								"instance-variable": "Beam"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Button2",
+							"sid": 739625694157535,
+							"parameters": {
+								"instance-variable": "Button2"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Laser",
+							"sid": 999205071127236,
+							"behaviorType": "Bullet"
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Dispencer2",
+							"sid": 232128132062775,
+							"parameters": {
+								"object": "Laser",
+								"layer": "2",
+								"image-point": "Dispencer2.ImagePointCount",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 195513588794153
 				},
 				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Button2",
-					"sid": 539948414740448,
-					"parameters": {
-						"instance-variable": "Button2"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "spawn-another-object",
-					"objectClass": "Dispenser2",
-					"sid": 941622221512340,
-					"parameters": {
-						"object": "Laser",
-						"layer": "0",
-						"image-point": "0",
-						"create-hierarchy": false
-					}
-				}
-			],
-			"sid": 801174254661286
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-created",
-					"objectClass": "Laser",
-					"sid": 189762948678044
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "Laser",
-					"sid": 867499327152598,
-					"parameters": {
-						"angle": "270"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Laser",
+							"sid": 322322551124585
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Laser",
+							"sid": 835780464493780,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Laser",
+							"sid": 662438602187283,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "400"
+							}
+						}
+					],
+					"sid": 594413328680362
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 439444361558057,
-					"parameters": {
-						"seconds": "1.5"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Laser",
-					"sid": 226095199067256
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Laser",
+							"sid": 959154554032266,
+							"parameters": {
+								"object": "Walls"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Laser",
+							"sid": 782096266735276
+						}
+					],
+					"sid": 469968247848842
 				}
 			],
-			"sid": 214050546458158
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Laser",
-					"sid": 362976047368128,
-					"parameters": {
-						"object": "Walls"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "Laser",
-					"sid": 939196231463715
-				}
-			],
-			"sid": 245685711743255
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Mc",
-					"sid": 607063440130076,
-					"parameters": {
-						"object": "Button2"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Button2",
-					"sid": 462833782035817,
-					"parameters": {
-						"instance-variable": "Button2"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Button2",
-					"sid": 666824523225938,
-					"parameters": {
-						"instance-variable": "Button2",
-						"value": "true"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Laser",
-					"sid": 706724448107479
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 112771627762925,
-					"parameters": {
-						"audio-file": "ButtonPress2",
-						"loop": "not-looping",
-						"volume": "-5",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 549788925651543
+			"sid": 166756814612212
 		}
 	],
 	"sid": 334725485858407

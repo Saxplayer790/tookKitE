@@ -9,6 +9,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 566911520361553
+		},
+		{
+			"name": "ButtonSound",
+			"type": "boolean",
+			"desc": "",
+			"sid": 642173988590811
 		}
 	],
 	"behaviorTypes": [],
@@ -18,14 +24,14 @@
 			{
 				"frames": [
 					{
-						"width": 332,
-						"height": 333,
+						"width": 632,
+						"height": 635,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8531503,
+						"imageSpriteId": 4022986,
 						"collisionPoly": {
 							"points": [
 								0.15060240963855423,

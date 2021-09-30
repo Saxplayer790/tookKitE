@@ -56,6 +56,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
@@ -79,8 +87,8 @@
 			"Audio",
 			"Laser",
 			"Button2",
-			"Dispenser2",
-			"BoobyTrap"
+			"BoobyTrap",
+			"Dispencer2"
 		],
 		"subfolders": []
 	},
@@ -129,6 +137,16 @@
 					"name": "RockPushEdit.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 334342137720063
+				},
+				{
+					"name": "567250__iwanplays__dropping-rocks.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 298036933985789
+				},
+				{
+					"name": "Laser_Beam_Sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 387167962364483
 				}
 			],
 			"subfolders": []
@@ -267,7 +285,7 @@
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app"
 	},
-	"viewportWidth": 1280,
-	"viewportHeight": 720,
+	"viewportWidth": 1500,
+	"viewportHeight": 900,
 	"firstLayout": null
 }

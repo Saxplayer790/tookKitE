@@ -9,6 +9,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 566283800820965
+		},
+		{
+			"name": "Rock",
+			"type": "number",
+			"desc": "",
+			"sid": 943868459575726
 		}
 	],
 	"behaviorTypes": [
@@ -21,6 +27,11 @@
 			"behaviorId": "TileMovement",
 			"name": "TileMovement",
 			"sid": 245863404929576
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 354151621997377
 		}
 	],
 	"effectTypes": [],

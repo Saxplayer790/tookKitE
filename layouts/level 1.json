@@ -24,8 +24,8 @@
 					"world": {
 						"x": 51,
 						"y": 50,
-						"width": 1185,
-						"height": 633,
+						"width": 1419,
+						"height": 816,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -64,7 +64,7 @@
 					"world": {
 						"x": 0,
 						"y": 0,
-						"width": 1280,
+						"width": 1504,
 						"height": 64,
 						"originX": 0,
 						"originY": 0,
@@ -102,10 +102,10 @@
 						}
 					},
 					"world": {
-						"x": 0,
-						"y": 672,
-						"width": 1280,
-						"height": 64,
+						"x": 0.8554540313142525,
+						"y": 838.0000000000001,
+						"width": 1502.418048141707,
+						"height": 61.43363790605713,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -136,7 +136,7 @@
 					"behaviors": {
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -144,7 +144,7 @@
 					"world": {
 						"x": 64,
 						"y": 64,
-						"width": 608,
+						"width": 830,
 						"height": 64,
 						"originX": 0,
 						"originY": 0,
@@ -182,53 +182,12 @@
 						}
 					},
 					"world": {
-						"x": 1280,
-						"y": 64,
-						"width": 608,
+						"x": 1501,
+						"y": 62,
+						"width": 778,
 						"height": 64,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 1.5707963267948966,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Arrow",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 17,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 400,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 288.61069217115994,
-						"y": -53.19375169105807,
-						"width": 79.25758280726872,
-						"height": 19.81439570181718,
-						"originX": 0.5,
-						"originY": 0.48,
 						"color": [
 							1,
 							1,
@@ -267,38 +226,9 @@
 			"global": false
 		},
 		{
-			"name": "Hole and Door",
+			"name": "Dispensers",
 			"overriden": 0,
 			"instances": [
-				{
-					"type": "Door",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1185.5,
-						"y": 605.5,
-						"width": 72.50617283950616,
-						"height": 125.93385214007782,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "Hole",
 					"properties": {
@@ -314,8 +244,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 1088,
-						"y": 608,
+						"x": 1248,
+						"y": 584,
 						"width": 83.86729857819905,
 						"height": 95.54502369668248,
 						"originX": 0.39783001808318263,
@@ -331,7 +261,7 @@
 					}
 				},
 				{
-					"type": "Rock",
+					"type": "Dispenser",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -339,9 +269,11 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 8,
+					"uid": 16,
 					"instanceVariables": {
-						"RockSound": true
+						"Rate": 0,
+						"Arrow": 1,
+						"Shoot": true
 					},
 					"behaviors": {
 						"Solid": {
@@ -349,28 +281,284 @@
 								"enabled": true,
 								"tags": ""
 							}
-						},
-						"TileMovement": {
+						}
+					},
+					"world": {
+						"x": 335,
+						"y": 151,
+						"width": 100.39749795787179,
+						"height": 93.56537295266476,
+						"originX": 0.8200692041522492,
+						"originY": 0.4715346534653465,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoobyTrap",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 22,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 841,
+						"y": 356,
+						"width": 83,
+						"height": 73,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 485300600895473,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Projectiles",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "Dispencer2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"instanceVariables": {
+						"Beam": true,
+						"Laser": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 520,
+						"y": 748,
+						"width": 91.65729460219549,
+						"height": 98.3500921040885,
+						"originX": 0.47896039603960394,
+						"originY": 0.1580161476355248,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Arrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 17,
+					"instanceVariables": {
+						"Arrow": 0
+					},
+					"behaviors": {
+						"Bullet": {
 							"properties": {
-								"grid-width": 32,
-								"grid-height": 32,
-								"grid-offset-x": 0,
-								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
-								"enabled": true,
-								"default-controls": false,
-								"isometric": false
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
 							}
 						}
 					},
 					"world": {
-						"x": 704,
-						"y": 354,
-						"width": 63.73666874569392,
-						"height": 63.73666874569386,
+						"x": 288.61069217115994,
+						"y": -53.19375169105807,
+						"width": 79.25758280726872,
+						"height": 19.81439570181718,
 						"originX": 0.5,
-						"originY": 0.5293685756240823,
+						"originY": 0.48,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Laser",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 20,
+					"instanceVariables": {
+						"Laser": 0,
+						"LaserSound": true
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 527,
+						"y": 1039,
+						"width": 28.551818929396433,
+						"height": 28.551818929396433,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 361511567205445,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Buttons",
+			"overriden": 0,
+			"instances": [],
+			"sid": 609931688151468,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Door",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "Door",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1402,
+						"y": 572,
+						"width": 72.50617283950616,
+						"height": 125.93385214007782,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -392,7 +580,8 @@
 					},
 					"uid": 14,
 					"instanceVariables": {
-						"Button": false
+						"Button": false,
+						"ButtonSound": true
 					},
 					"behaviors": {},
 					"world": {
@@ -411,9 +600,127 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Button2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"instanceVariables": {
+						"Button2": false,
+						"ButtonSound": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 137,
+						"y": 564,
+						"width": 85.6011102560633,
+						"height": 86.00744464019019,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 682608370069063,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Rock",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "Rock",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 8,
+					"instanceVariables": {
+						"RockSound": true,
+						"Rock": 1
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"TileMovement": {
+							"properties": {
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 200,
+								"speed-y": 200,
+								"enabled": true,
+								"default-controls": false,
+								"isometric": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 704,
+						"y": 354,
+						"width": 63.73666874569392,
+						"height": 63.73666874569386,
+						"originX": 0.5,
+						"originY": 0.5293685756240823,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 480329444551988,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -474,165 +781,6 @@
 						"y": 351.2679461785398,
 						"width": 64,
 						"height": 64,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Dispenser",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 16,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 247,
-						"y": 111,
-						"width": 100.39749795787179,
-						"height": 93.56537295266476,
-						"originX": 0.5065759087777214,
-						"originY": 0.7707018554908925,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 1.5707963267948966,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Laser",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 20,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 400,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 485,
-						"y": 792,
-						"width": 28.551818929396433,
-						"height": 28.551818929396433,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Button2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 21,
-					"instanceVariables": {
-						"Button2": false
-					},
-					"behaviors": {},
-					"world": {
-						"x": 129,
-						"y": 576,
-						"width": 61.345639716388455,
-						"height": 61.53041573963061,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Dispenser2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 19,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 488,
-						"y": 614,
-						"width": 78.24063019506038,
-						"height": 89.71135716020052,
-						"originX": 0.487964989059081,
-						"originY": 0.5486641221374046,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 3.141592653589793,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "BoobyTrap",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 22,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 841,
-						"y": 356,
-						"width": 83,
-						"height": 73,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

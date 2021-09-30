@@ -13,14 +13,14 @@
 	],
 	"effectTypes": [],
 	"image": {
-		"width": 250,
-		"height": 250,
+		"width": 572,
+		"height": 562,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 854167,
+		"imageSpriteId": 340174,
 		"useCollisionPoly": true
 	}
 }

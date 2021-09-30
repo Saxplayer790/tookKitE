@@ -9,6 +9,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 921393455365280
+		},
+		{
+			"name": "ButtonSound",
+			"type": "boolean",
+			"desc": "",
+			"sid": 165935490444686
 		}
 	],
 	"behaviorTypes": [],
