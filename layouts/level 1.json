@@ -226,137 +226,6 @@
 			"global": false
 		},
 		{
-			"name": "Dispensers",
-			"overriden": 0,
-			"instances": [
-				{
-					"type": "Hole",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 9,
-					"instanceVariables": {
-						"RockOverHole": false
-					},
-					"behaviors": {},
-					"world": {
-						"x": 1248,
-						"y": 584,
-						"width": 83.86729857819905,
-						"height": 95.54502369668248,
-						"originX": 0.39783001808318263,
-						"originY": 0.43333333333333335,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Dispenser",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 16,
-					"instanceVariables": {
-						"Rate": 0,
-						"Arrow": 1,
-						"Shoot": true
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 335,
-						"y": 151,
-						"width": 100.39749795787179,
-						"height": 93.56537295266476,
-						"originX": 0.8200692041522492,
-						"originY": 0.4715346534653465,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 1.5707963267948966,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "BoobyTrap",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 22,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 841,
-						"y": 356,
-						"width": 83,
-						"height": 73,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
-			"sid": 485300600895473,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				1,
-				1,
-				1,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
 			"name": "Projectiles",
 			"overriden": 0,
 			"instances": [
@@ -507,10 +376,111 @@
 			"global": false
 		},
 		{
-			"name": "Buttons",
+			"name": "Obsticles",
 			"overriden": 0,
-			"instances": [],
-			"sid": 609931688151468,
+			"instances": [
+				{
+					"type": "Hole",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"instanceVariables": {
+						"RockOverHole": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1248,
+						"y": 584,
+						"width": 83.86729857819905,
+						"height": 95.54502369668248,
+						"originX": 0.39783001808318263,
+						"originY": 0.43333333333333335,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Dispenser",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 16,
+					"instanceVariables": {
+						"Rate": 0,
+						"Arrow": 1,
+						"Shoot": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 335,
+						"y": 151,
+						"width": 100.39749795787179,
+						"height": 93.56537295266476,
+						"originX": 0.8200692041522492,
+						"originY": 0.4715346534653465,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoobyTrap",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 22,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 841,
+						"y": 356,
+						"width": 83,
+						"height": 73,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 485300600895473,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -537,38 +507,9 @@
 			"global": false
 		},
 		{
-			"name": "Door",
+			"name": "Buttons",
 			"overriden": 0,
 			"instances": [
-				{
-					"type": "Door",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "DoorClosed",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1402,
-						"y": 572,
-						"width": 72.50617283950616,
-						"height": 125.93385214007782,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "Button",
 					"properties": {
@@ -621,6 +562,66 @@
 						"y": 564,
 						"width": 85.6011102560633,
 						"height": 86.00744464019019,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 609931688151468,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Door",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "Door",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "DoorClosed",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1402,
+						"y": 572,
+						"width": 72.50617283950616,
+						"height": 125.93385214007782,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -824,8 +825,8 @@
 	"sid": 264240006936515,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 2560,
-	"height": 1440,
+	"width": 1500,
+	"height": 900,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
