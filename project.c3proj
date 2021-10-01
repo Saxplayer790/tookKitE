@@ -147,12 +147,23 @@
 					"name": "Laser_Beam_Sound.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 387167962364483
+				},
+				{
+					"name": "LaserSound2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 123385227858278
 				}
 			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "audiomass-output.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 947264806497742
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

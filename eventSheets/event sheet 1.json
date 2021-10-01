@@ -18,6 +18,17 @@
 					"parameters": {
 						"collisions": "disabled"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 878139956298019,
+					"parameters": {
+						"audio-file": "audiomass-output",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"BackgroundMusic\""
+					}
 				}
 			],
 			"sid": 219766041811804
@@ -721,12 +732,12 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 480539909354025,
+							"sid": 342225638934315,
 							"parameters": {
 								"object-to-create": "Rock",
 								"layer": "Rock.LayerNumber",
-								"x": "704",
-								"y": "354",
+								"x": "270",
+								"y": "519",
 								"create-hierarchy": false
 							}
 						},
@@ -830,11 +841,11 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Dispenser",
-							"sid": 132001239081199,
+							"sid": 559008727043557,
 							"parameters": {
 								"object": "Arrow",
 								"layer": "2",
-								"image-point": "0",
+								"image-point": "Dispenser.ImagePointCount",
 								"create-hierarchy": false
 							}
 						}
@@ -863,11 +874,24 @@
 						{
 							"id": "set-speed",
 							"objectClass": "Arrow",
-							"sid": 514085624330809,
+							"sid": 519977811969607,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"speed": "300"
+								"speed": "330"
 							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 946900809677072,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Arrow",
+							"sid": 644307989360062
 						}
 					],
 					"sid": 557955789775345
@@ -1065,7 +1089,7 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 743723103090637,
+							"sid": 669311486101734,
 							"parameters": {
 								"interval-seconds": "0.1"
 							}
@@ -1108,7 +1132,7 @@
 						{
 							"id": "set-speed",
 							"objectClass": "Laser",
-							"sid": 662438602187283,
+							"sid": 391286806031675,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"speed": "400"
@@ -1184,6 +1208,28 @@
 				}
 			],
 			"sid": 338169929395352
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 757885320806756
+				}
+			],
+			"actions": [
+				{
+					"id": "set-paused",
+					"objectClass": "Audio",
+					"sid": 923961768760030,
+					"parameters": {
+						"tag": "\"BackgroundMusic\"",
+						"state": "pause"
+					}
+				}
+			],
+			"sid": 492432504819550
 		}
 	],
 	"sid": 334725485858407
