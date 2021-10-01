@@ -12,9 +12,15 @@
 		},
 		{
 			"name": "Rock",
-			"type": "boolean",
+			"type": "number",
 			"desc": "",
 			"sid": 999927098482492
+		},
+		{
+			"name": "RockDestroyed",
+			"type": "boolean",
+			"desc": "",
+			"sid": 803936123684957
 		}
 	],
 	"behaviorTypes": [

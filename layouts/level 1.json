@@ -491,7 +491,8 @@
 					"uid": 8,
 					"instanceVariables": {
 						"RockSound": true,
-						"Rock": true
+						"Rock": 1,
+						"RockDestroyed": true
 					},
 					"behaviors": {
 						"Solid": {
