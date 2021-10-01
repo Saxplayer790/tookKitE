@@ -12,9 +12,9 @@
 		},
 		{
 			"name": "Rock",
-			"type": "number",
+			"type": "boolean",
 			"desc": "",
-			"sid": 943868459575726
+			"sid": 999927098482492
 		}
 	],
 	"behaviorTypes": [

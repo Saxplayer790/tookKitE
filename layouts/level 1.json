@@ -478,9 +478,94 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Rock",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 8,
+					"instanceVariables": {
+						"RockSound": true,
+						"Rock": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"TileMovement": {
+							"properties": {
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 200,
+								"speed-y": 200,
+								"enabled": true,
+								"default-controls": false,
+								"isometric": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 713,
+						"y": 352,
+						"width": 61.87469864750511,
+						"height": 60.18014391113238,
+						"originX": 0.4965277777777778,
+						"originY": 0.5171073094867809,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 485300600895473,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Rock",
+			"overriden": 0,
+			"instances": [],
+			"sid": 480329444551988,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
@@ -636,92 +721,6 @@
 				}
 			],
 			"sid": 682608370069063,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				1,
-				1,
-				1,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "Rock",
-			"overriden": 0,
-			"instances": [
-				{
-					"type": "Rock",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 8,
-					"instanceVariables": {
-						"RockSound": true,
-						"Rock": 1
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"TileMovement": {
-							"properties": {
-								"grid-width": 32,
-								"grid-height": 32,
-								"grid-offset-x": 0,
-								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
-								"enabled": true,
-								"default-controls": false,
-								"isometric": false
-							}
-						},
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 713,
-						"y": 352,
-						"width": 61.87469864750511,
-						"height": 60.18014391113238,
-						"originX": 0.4965277777777778,
-						"originY": 0.5171073094867809,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
-			"sid": 480329444551988,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [

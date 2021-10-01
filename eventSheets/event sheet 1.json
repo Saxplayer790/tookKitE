@@ -79,19 +79,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "Rock",
-							"sid": 192299070663271,
-							"parameters": {
-								"instance-variable": "Rock",
-								"comparison": 0,
-								"value": "1"
-							}
-						},
-						{
 							"id": "is-moving",
 							"objectClass": "Rock",
-							"sid": 818075655199437,
+							"sid": 339103582625947,
 							"behaviorType": "TileMovement",
 							"isInverted": true
 						}
@@ -100,7 +90,7 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "Rock",
-							"sid": 521041474203355,
+							"sid": 693862840782897,
 							"behaviorType": "Solid",
 							"parameters": {
 								"state": "enabled"
@@ -109,40 +99,13 @@
 						{
 							"id": "stop",
 							"objectClass": "Audio",
-							"sid": 459189046370337,
+							"sid": 234226380006115,
 							"parameters": {
 								"tag": "\"RockSound\""
 							}
 						}
 					],
-					"sid": 811591133273131,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-enabled",
-									"objectClass": "Rock",
-									"sid": 437612446580197,
-									"behaviorType": "TileMovement"
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 794135773353393,
-									"parameters": {
-										"audio-file": "RockPushEdit",
-										"loop": "not-looping",
-										"volume": "-5",
-										"tag-optional": "\"RockSound\""
-									}
-								}
-							],
-							"sid": 253187140703113
-						}
-					]
+					"sid": 288275269386985
 				},
 				{
 					"eventType": "block",
@@ -155,7 +118,19 @@
 							"isInverted": true
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 608170493774260,
+							"parameters": {
+								"audio-file": "RockPushEdit",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"RockSound\""
+							}
+						}
+					],
 					"sid": 635856177697284,
 					"children": [
 						{
@@ -491,12 +466,6 @@
 							]
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [],
-					"sid": 751951961066456
 				}
 			],
 			"sid": 190203947207365
@@ -615,31 +584,6 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Laser",
-							"sid": 557916554980765,
-							"parameters": {
-								"object": "Rock"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-instvar",
-							"objectClass": "Rock",
-							"sid": 415936842145856,
-							"parameters": {
-								"instance-variable": "Rock",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 346142151428334
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
 							"objectClass": "Arrow",
 							"sid": 694706962633799,
 							"parameters": {
@@ -693,34 +637,11 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-destroyed",
-							"objectClass": "Rock",
-							"sid": 655868757813179
-						}
-					],
-					"actions": [
-						{
-							"id": "stop",
-							"objectClass": "Audio",
-							"sid": 124987088557134,
+							"id": "on-collision-with-another-object",
+							"objectClass": "Laser",
+							"sid": 170839749517099,
 							"parameters": {
-								"tag": "\"RockSound\""
-							}
-						}
-					],
-					"sid": 925620416130118
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Rock",
-							"sid": 531885511342125,
-							"parameters": {
-								"instance-variable": "Rock",
-								"comparison": 0,
-								"value": "0"
+								"object": "Rock"
 							}
 						}
 					],
@@ -728,12 +649,12 @@
 						{
 							"id": "destroy",
 							"objectClass": "Rock",
-							"sid": 995248281582145
+							"sid": 966729706760991
 						},
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 691648701227257,
+							"sid": 582643536783353,
 							"parameters": {
 								"seconds": "3"
 							}
@@ -741,7 +662,7 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 683278510742217,
+							"sid": 214062853776281,
 							"parameters": {
 								"object-to-create": "Rock",
 								"layer": "Rock.LayerNumber",
@@ -753,7 +674,7 @@
 						{
 							"id": "flash",
 							"objectClass": "Rock",
-							"sid": 459021647699451,
+							"sid": 650896781041340,
 							"behaviorType": "Flash",
 							"parameters": {
 								"on-time": "0.1",
@@ -762,29 +683,7 @@
 							}
 						}
 					],
-					"sid": 505674305469424
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "Rock",
-							"sid": 734489160430952
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Rock",
-							"sid": 522265275132578,
-							"parameters": {
-								"instance-variable": "Rock",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 210372659911316
+					"sid": 370196648145838
 				}
 			],
 			"sid": 636434325431842
