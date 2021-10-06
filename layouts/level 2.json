@@ -276,8 +276,8 @@
 								"grid-height": 32,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 100,
-								"speed-y": 100,
+								"speed-x": 200,
+								"speed-y": 200,
 								"enabled": true,
 								"default-controls": true,
 								"isometric": false
