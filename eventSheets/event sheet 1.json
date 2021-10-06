@@ -863,6 +863,17 @@
 					],
 					"actions": [
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 426000905877030,
+							"parameters": {
+								"audio-file": "ArrowSwoosh2",
+								"loop": "not-looping",
+								"volume": "-25",
+								"tag-optional": "\"ArrowSound\""
+							}
+						},
+						{
 							"id": "set-angle-of-motion",
 							"objectClass": "Arrow",
 							"sid": 156659259162653,
@@ -1136,6 +1147,17 @@
 							"behaviorType": "Bullet",
 							"parameters": {
 								"speed": "400"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 397508222198602,
+							"parameters": {
+								"audio-file": "LaserSound2",
+								"loop": "not-looping",
+								"volume": "-30",
+								"tag-optional": "\"LaserSound\""
 							}
 						}
 					],

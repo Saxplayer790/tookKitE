@@ -2,7 +2,7 @@
 	"name": "Level 2",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "Background",
 			"overriden": 0,
 			"instances": [
 				{
@@ -226,7 +226,7 @@
 			"global": false
 		},
 		{
-			"name": "Layer 1",
+			"name": "Obsticles",
 			"overriden": 0,
 			"instances": [
 				{
@@ -243,7 +243,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 1425,
-						"y": 768,
+						"y": 465,
 						"width": 95,
 						"height": 193,
 						"originX": 0.5,
@@ -257,7 +257,68 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
+				}
+			],
+			"sid": 134934241299419,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Buttons",
+			"overriden": 0,
+			"instances": [],
+			"sid": 592936271042587,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Player",
+			"overriden": 0,
+			"instances": [
 				{
 					"type": "Mc",
 					"properties": {
@@ -302,102 +363,7 @@
 					}
 				}
 			],
-			"sid": 134934241299419,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				1,
-				1,
-				1,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "Layer 2",
-			"overriden": 0,
-			"instances": [
-				{
-					"type": "Button2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 28,
-					"instanceVariables": {
-						"Button2": false,
-						"ButtonSound": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 117,
-						"y": 760,
-						"width": 85.6011102560633,
-						"height": 86.00744464019019,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Button",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 29,
-					"instanceVariables": {
-						"Button": false,
-						"ButtonSound": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 182,
-						"y": 267,
-						"width": 86.30841583245497,
-						"height": 86.71810767976096,
-						"originX": 0.5030120481927711,
-						"originY": 0.4954954954954955,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
-			"sid": 592936271042587,
+			"sid": 446446533840814,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
