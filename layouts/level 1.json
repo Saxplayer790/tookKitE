@@ -230,7 +230,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Button",
+					"type": "ArrowButton",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -262,7 +262,7 @@
 					}
 				},
 				{
-					"type": "Button2",
+					"type": "ArrowButton2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -272,17 +272,17 @@
 					},
 					"uid": 21,
 					"instanceVariables": {
-						"Button2": false,
+						"Button": false,
 						"ButtonSound": true
 					},
 					"behaviors": {},
 					"world": {
-						"x": 459,
-						"y": 743,
-						"width": 85.6011102560633,
-						"height": 86.00744464019019,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 961,
+						"y": 113,
+						"width": 86.30841583245497,
+						"height": 86.71810767976096,
+						"originX": 0.5030120481927711,
+						"originY": 0.4954954954954955,
 						"color": [
 							1,
 							1,
@@ -356,7 +356,7 @@
 					}
 				},
 				{
-					"type": "Dispenser",
+					"type": "ArrowDispenser",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -379,8 +379,8 @@
 						}
 					},
 					"world": {
-						"x": 467,
-						"y": 151,
+						"x": 470,
+						"y": 161,
 						"width": 100.39749795787179,
 						"height": 93.56537295266476,
 						"originX": 0.9423298731257209,
@@ -484,38 +484,6 @@
 			"name": "Projectiles",
 			"overriden": 0,
 			"instances": [
-				{
-					"type": "Dispencer2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 19,
-					"instanceVariables": {
-						"Beam": true,
-						"Laser": 0
-					},
-					"behaviors": {},
-					"world": {
-						"x": 563,
-						"y": 748,
-						"width": 91.65729460219549,
-						"height": 98.3500921040885,
-						"originX": 0.4814356435643564,
-						"originY": 0.21337946943483277,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "Arrow",
 					"properties": {
@@ -782,6 +750,46 @@
 			"overriden": 0,
 			"instances": [
 				{
+					"type": "ArrowDispenser2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"instanceVariables": {
+						"Rate": 0,
+						"Arrow": 1,
+						"Shoot": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 857,
+						"y": 162,
+						"width": 100.39749795787179,
+						"height": 93.56537295266476,
+						"originX": 0.9423298731257209,
+						"originY": 0.47896039603960394,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Mc",
 					"properties": {
 						"initially-visible": true,
@@ -808,8 +816,8 @@
 						}
 					},
 					"world": {
-						"x": 114,
-						"y": 511,
+						"x": 160,
+						"y": 494,
 						"width": 51.2,
 						"height": 55.04,
 						"originX": 0.51,

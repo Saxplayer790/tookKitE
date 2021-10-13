@@ -1,0 +1,70 @@
+{
+	"name": "LazerDispenser",
+	"plugin-id": "Sprite",
+	"sid": 184078786534179,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Beam",
+			"type": "boolean",
+			"desc": "",
+			"sid": 644703551183420
+		},
+		{
+			"name": "Laser",
+			"type": "number",
+			"desc": "",
+			"sid": 964164451482034
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 808,
+						"height": 867,
+						"originX": 0.4814356435643564,
+						"originY": 0.21337946943483277,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7788838,
+						"collisionPoly": {
+							"points": [
+								0.03217821782178221,
+								0.9746251441753172,
+								0.01980198019801982,
+								0.5011534025374855,
+								0.12252475247524752,
+								0.11303344867358711,
+								0.5006188118811881,
+								0.0023068050749711633,
+								0.8762376237623762,
+								0.11418685121107264,
+								0.995049504950495,
+								0.5011534025374855,
+								0.9702970297029703,
+								0.9769319492502884,
+								0.5006188118811881,
+								0.9896193771626297
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 695289507317382,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

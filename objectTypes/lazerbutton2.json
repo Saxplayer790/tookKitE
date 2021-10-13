@@ -1,20 +1,20 @@
 {
-	"name": "Button2",
+	"name": "LazerButton2",
 	"plugin-id": "Sprite",
-	"sid": 643113177681288,
+	"sid": 728389563400619,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "Button2",
 			"type": "boolean",
 			"desc": "",
-			"sid": 566911520361553
+			"sid": 916079480844358
 		},
 		{
 			"name": "ButtonSound",
 			"type": "boolean",
 			"desc": "",
-			"sid": 642173988590811
+			"sid": 235111034120316
 		}
 	],
 	"behaviorTypes": [],
@@ -31,7 +31,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4022986,
+						"imageSpriteId": 9400137,
 						"collisionPoly": {
 							"points": [
 								0.15060240963855423,
@@ -56,7 +56,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 558522565069742,
+				"sid": 570544800989973,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

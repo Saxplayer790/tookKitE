@@ -12,14 +12,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-collisions-enabled",
-					"objectClass": "Door",
-					"sid": 327498269631992,
-					"parameters": {
-						"collisions": "disabled"
-					}
-				},
-				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 878139956298019,
@@ -32,6 +24,31 @@
 				}
 			],
 			"sid": 219766041811804
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Door",
+					"sid": 111638974327980,
+					"parameters": {
+						"object": "Mc"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Door",
+					"sid": 209272240264870,
+					"parameters": {
+						"animation": "\"DoorOpen\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 412319666454387
 		},
 		{
 			"eventType": "block",
@@ -56,28 +73,6 @@
 				}
 			],
 			"sid": 584569323086296
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "collisions-enabled",
-					"objectClass": "Door",
-					"sid": 992977626103682
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Door",
-					"sid": 898621561888689,
-					"parameters": {
-						"animation": "\"DoorOpen\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 811587803333188
 		},
 		{
 			"eventType": "group",
@@ -813,7 +808,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Dispenser",
+							"objectClass": "ArrowDispenser",
 							"sid": 224859484291174,
 							"parameters": {
 								"instance-variable": "Shoot"
@@ -821,7 +816,7 @@
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Button",
+							"objectClass": "ArrowButton",
 							"sid": 759364558033233,
 							"parameters": {
 								"instance-variable": "Button"
@@ -840,17 +835,61 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Dispenser",
+							"objectClass": "ArrowDispenser",
 							"sid": 559008727043557,
 							"parameters": {
 								"object": "Arrow",
 								"layer": "2",
-								"image-point": "Dispenser.ImagePointCount",
+								"image-point": "ArrowDispenser.ImagePointCount",
 								"create-hierarchy": false
 							}
 						}
 					],
 					"sid": 844434326832670
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ArrowDispenser2",
+							"sid": 921432731709832,
+							"parameters": {
+								"instance-variable": "Shoot"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ArrowButton2",
+							"sid": 630550061382245,
+							"parameters": {
+								"instance-variable": "Button"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 591616525472071,
+							"parameters": {
+								"interval-seconds": "0.5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "ArrowDispenser2",
+							"sid": 219577318296769,
+							"parameters": {
+								"object": "Arrow",
+								"layer": "2",
+								"image-point": "ArrowDispenser2.ImagePointCount",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 676260449317786
 				},
 				{
 					"eventType": "block",
@@ -967,12 +1006,12 @@
 							"objectClass": "Mc",
 							"sid": 331673541939503,
 							"parameters": {
-								"object": "Button"
+								"object": "ArrowButton"
 							}
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Button",
+							"objectClass": "ArrowButton",
 							"sid": 699197032805338,
 							"parameters": {
 								"instance-variable": "Button"
@@ -983,7 +1022,7 @@
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Button",
+							"objectClass": "ArrowButton",
 							"sid": 250635484823170,
 							"parameters": {
 								"instance-variable": "Button",
@@ -992,7 +1031,7 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Dispenser",
+							"objectClass": "ArrowDispenser",
 							"sid": 837432576033701,
 							"parameters": {
 								"instance-variable": "Shoot",
@@ -1019,14 +1058,68 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Mc",
-							"sid": 431121490415690,
+							"sid": 377145608960825,
 							"parameters": {
-								"object": "Button2"
+								"object": "ArrowButton2"
 							}
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Button2",
+							"objectClass": "ArrowButton2",
+							"sid": 641325557480706,
+							"parameters": {
+								"instance-variable": "Button"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ArrowButton2",
+							"sid": 862133029069788,
+							"parameters": {
+								"instance-variable": "Button",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ArrowDispenser2",
+							"sid": 619455205020623,
+							"parameters": {
+								"instance-variable": "Shoot",
+								"value": "false"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 758435009514568,
+							"parameters": {
+								"audio-file": "ButtonPress2",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"ButtonSound\""
+							}
+						}
+					],
+					"sid": 798409801623446
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Mc",
+							"sid": 431121490415690,
+							"parameters": {
+								"object": "LazerButton"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "LazerButton",
 							"sid": 663319065095749,
 							"parameters": {
 								"instance-variable": "Button2"
@@ -1037,7 +1130,7 @@
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Button2",
+							"objectClass": "LazerButton",
 							"sid": 336867164745127,
 							"parameters": {
 								"instance-variable": "Button2",
@@ -1057,7 +1150,7 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Dispencer2",
+							"objectClass": "LazerDispenser",
 							"sid": 843482936857316,
 							"parameters": {
 								"instance-variable": "Beam",
@@ -1082,7 +1175,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Dispencer2",
+							"objectClass": "LazerDispenser",
 							"sid": 802191385787664,
 							"parameters": {
 								"instance-variable": "Beam"
@@ -1090,7 +1183,7 @@
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Button2",
+							"objectClass": "LazerButton",
 							"sid": 739625694157535,
 							"parameters": {
 								"instance-variable": "Button2"
@@ -1109,17 +1202,61 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Dispencer2",
+							"objectClass": "LazerDispenser",
 							"sid": 232128132062775,
 							"parameters": {
 								"object": "Laser",
 								"layer": "2",
-								"image-point": "Dispencer2.ImagePointCount",
+								"image-point": "LazerDispenser.ImagePointCount",
 								"create-hierarchy": false
 							}
 						}
 					],
 					"sid": 195513588794153
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "LazerDispenser2",
+							"sid": 953348624978831,
+							"parameters": {
+								"instance-variable": "Beam"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "LazerButton2",
+							"sid": 532270957230710,
+							"parameters": {
+								"instance-variable": "Button2"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 382774756161277,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "LazerDispenser2",
+							"sid": 696840747489256,
+							"parameters": {
+								"object": "Laser",
+								"layer": "2",
+								"image-point": "LazerDispenser2.ImagePointCount",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 810925216464679
 				},
 				{
 					"eventType": "block",

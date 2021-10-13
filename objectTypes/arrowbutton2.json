@@ -1,20 +1,20 @@
 {
-	"name": "Button",
+	"name": "ArrowButton2",
 	"plugin-id": "Sprite",
-	"sid": 926708969045539,
+	"sid": 178502473386903,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "Button",
 			"type": "boolean",
 			"desc": "",
-			"sid": 921393455365280
+			"sid": 226002547877591
 		},
 		{
 			"name": "ButtonSound",
 			"type": "boolean",
 			"desc": "",
-			"sid": 165935490444686
+			"sid": 108080468839608
 		}
 	],
 	"behaviorTypes": [],
@@ -31,7 +31,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2014815,
+						"imageSpriteId": 1833434,
 						"collisionPoly": {
 							"points": [
 								0.14156626506024098,
@@ -56,7 +56,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 654852305996071,
+				"sid": 797759118474421,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

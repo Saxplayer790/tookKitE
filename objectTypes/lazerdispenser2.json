@@ -1,20 +1,20 @@
 {
-	"name": "Dispencer2",
+	"name": "LazerDispenser2",
 	"plugin-id": "Sprite",
-	"sid": 184078786534179,
+	"sid": 266315320120111,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "Beam",
 			"type": "boolean",
 			"desc": "",
-			"sid": 644703551183420
+			"sid": 548381844096820
 		},
 		{
 			"name": "Laser",
 			"type": "number",
 			"desc": "",
-			"sid": 964164451482034
+			"sid": 949994340010296
 		}
 	],
 	"behaviorTypes": [],
@@ -31,7 +31,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7788838,
+						"imageSpriteId": 5459125,
 						"collisionPoly": {
 							"points": [
 								0.03217821782178221,
@@ -56,7 +56,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 695289507317382,
+				"sid": 374484118237504,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

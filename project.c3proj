@@ -80,15 +80,19 @@
 			"Rock",
 			"Hole",
 			"Keyboard",
-			"Button",
+			"ArrowButton",
 			"Background",
-			"Dispenser",
+			"ArrowDispenser",
 			"Arrow",
 			"Audio",
 			"Laser",
-			"Button2",
+			"LazerButton",
 			"BoobyTrap",
-			"Dispencer2"
+			"LazerDispenser",
+			"ArrowDispenser2",
+			"ArrowButton2",
+			"LazerDispenser2",
+			"LazerButton2"
 		],
 		"subfolders": []
 	},

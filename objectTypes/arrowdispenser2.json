@@ -1,33 +1,33 @@
 {
-	"name": "Dispenser",
+	"name": "ArrowDispenser2",
 	"plugin-id": "Sprite",
-	"sid": 142375630076814,
+	"sid": 476840124817535,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "Rate",
 			"type": "number",
 			"desc": "",
-			"sid": 357338063518455
+			"sid": 394855077403175
 		},
 		{
 			"name": "Arrow",
 			"type": "number",
 			"desc": "",
-			"sid": 351843689699704
+			"sid": 871593776871112
 		},
 		{
 			"name": "Shoot",
 			"type": "boolean",
 			"desc": "",
-			"sid": 520470385901907
+			"sid": 730607307005051
 		}
 	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 696186492281041
+			"sid": 652278743196270
 		}
 	],
 	"effectTypes": [],
@@ -43,7 +43,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2111487,
+						"imageSpriteId": 8729164,
 						"collisionPoly": {
 							"points": [
 								0.8864163505536079,
@@ -68,7 +68,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 514129336708583,
+				"sid": 708828465103639,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
