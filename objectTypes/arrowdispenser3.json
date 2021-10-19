@@ -1,0 +1,82 @@
+{
+	"name": "ArrowDispenser3",
+	"plugin-id": "Sprite",
+	"sid": 182466670167558,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Rate",
+			"type": "number",
+			"desc": "",
+			"sid": 527460761106430
+		},
+		{
+			"name": "Arrow",
+			"type": "number",
+			"desc": "",
+			"sid": 993769118372721
+		},
+		{
+			"name": "Shoot",
+			"type": "boolean",
+			"desc": "",
+			"sid": 781112681980717
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 200659821314402
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 867,
+						"height": 808,
+						"originX": 0.9423298731257209,
+						"originY": 0.47896039603960394,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4028655,
+						"collisionPoly": {
+							"points": [
+								0.8864163505536079,
+								0.0006778588164160471,
+								1,
+								0.54946361764039,
+								0.7737892428177346,
+								0.9986442823671681,
+								0.486700536824332,
+								0.9986442823671681,
+								0.20182020549241714,
+								0.9986442823671681,
+								0,
+								0.54946361764039,
+								0.08919309775654373,
+								0.0006778588164160471,
+								0.486700536824332,
+								0.0006778588164160471
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 659174072404050,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

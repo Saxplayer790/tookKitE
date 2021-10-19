@@ -895,6 +895,84 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ArrowDispenser3",
+							"sid": 650023539185852,
+							"parameters": {
+								"instance-variable": "Shoot"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ArrowButton3",
+							"sid": 570689572997955,
+							"parameters": {
+								"instance-variable": "Button"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 106003338731838,
+							"parameters": {
+								"interval-seconds": "0.5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "ArrowDispenser3",
+							"sid": 982056400919917,
+							"parameters": {
+								"object": "Arrow",
+								"layer": "2",
+								"image-point": "ArrowDispenser2.ImagePointCount",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 327030853818306,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "move-at-angle",
+							"objectClass": "ArrowDispenser3",
+							"sid": 160680904023795,
+							"parameters": {
+								"angle": "30",
+								"distance": "10"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 951971778156671,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "move-at-angle",
+							"objectClass": "ArrowDispenser3",
+							"sid": 611612823787265,
+							"parameters": {
+								"angle": "-30",
+								"distance": "10"
+							}
+						}
+					],
+					"sid": 209986809098107
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-created",
 							"objectClass": "Arrow",
 							"sid": 212088194921463
@@ -1159,6 +1237,60 @@
 						}
 					],
 					"sid": 259120612907457
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Mc",
+							"sid": 749774633680338,
+							"parameters": {
+								"object": "LazerButton2"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "LazerButton",
+							"sid": 510488776394718,
+							"parameters": {
+								"instance-variable": "Button2"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "LazerButton2",
+							"sid": 588728577619436,
+							"parameters": {
+								"instance-variable": "Button2",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 483106576208813,
+							"parameters": {
+								"audio-file": "ButtonPress2",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"ButtonSound\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "LazerDispenser2",
+							"sid": 587211341271927,
+							"parameters": {
+								"instance-variable": "Beam",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 112222993964523
 				}
 			],
 			"sid": 544695971488682
@@ -1193,9 +1325,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 669311486101734,
+							"sid": 746810718767856,
 							"parameters": {
-								"interval-seconds": "0.1"
+								"interval-seconds": "1"
 							}
 						}
 					],
@@ -1209,6 +1341,14 @@
 								"layer": "2",
 								"image-point": "LazerDispenser.ImagePointCount",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 338929774168291,
+							"parameters": {
+								"seconds": "3"
 							}
 						}
 					],
@@ -1237,9 +1377,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 382774756161277,
+							"sid": 676691621138861,
 							"parameters": {
-								"interval-seconds": "0.1"
+								"interval-seconds": "1"
 							}
 						}
 					],
@@ -1320,6 +1460,27 @@
 						}
 					],
 					"sid": 469968247848842
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Laser",
+							"sid": 280614690337415,
+							"parameters": {
+								"object": "Mc"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 217131563997527
+						}
+					],
+					"sid": 844676080980894
 				}
 			],
 			"sid": 166756814612212

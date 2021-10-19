@@ -220,6 +220,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -280,6 +281,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -288,7 +290,104 @@
 		{
 			"name": "Buttons",
 			"overriden": 0,
-			"instances": [],
+			"instances": [
+				{
+					"type": "ArrowButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 33,
+					"instanceVariables": {
+						"Button": false,
+						"ButtonSound": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 447,
+						"y": 95,
+						"width": 86.30841583245497,
+						"height": 86.71810767976096,
+						"originX": 0.5030120481927711,
+						"originY": 0.4954954954954955,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LazerButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 29,
+					"instanceVariables": {
+						"Button2": false,
+						"ButtonSound": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 710,
+						"y": 806,
+						"width": 83,
+						"height": 83.00000000000001,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LazerButton2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 31,
+					"instanceVariables": {
+						"Button2": false,
+						"ButtonSound": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1062,
+						"y": 816,
+						"width": 83,
+						"height": 83.00000000000001,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 592936271042587,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -310,6 +409,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -346,8 +446,8 @@
 						}
 					},
 					"world": {
-						"x": 151,
-						"y": 504,
+						"x": 149,
+						"y": 468,
 						"width": 51.2,
 						"height": 55.04,
 						"originX": 0.51,
@@ -378,44 +478,12 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 427,
-						"y": 785,
+						"x": 612,
+						"y": 781,
 						"width": 100,
 						"height": 93,
 						"originX": 0.4814356435643564,
 						"originY": 0.21337946943483277,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "LazerButton",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 29,
-					"instanceVariables": {
-						"Button2": false,
-						"ButtonSound": false
-					},
-					"behaviors": {},
-					"world": {
-						"x": 533,
-						"y": 807,
-						"width": 83,
-						"height": 83.00000000000001,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -442,7 +510,7 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 853,
+						"x": 958,
 						"y": 781,
 						"width": 100,
 						"height": 93,
@@ -459,7 +527,7 @@
 					}
 				},
 				{
-					"type": "LazerButton2",
+					"type": "ArrowDispenser",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -467,19 +535,155 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 31,
+					"uid": 32,
 					"instanceVariables": {
-						"Button2": false,
-						"ButtonSound": false
+						"Rate": 0,
+						"Arrow": 1,
+						"Shoot": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 340,
+						"y": 146,
+						"width": 100.39749795787179,
+						"height": 93.56537295266476,
+						"originX": 0.9423298731257209,
+						"originY": 0.47896039603960394,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Rock",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 34,
+					"instanceVariables": {
+						"RockSound": true,
+						"Rock": 1,
+						"RockDestroyed": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"TileMovement": {
+							"properties": {
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 200,
+								"speed-y": 200,
+								"enabled": true,
+								"default-controls": false,
+								"isometric": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 183,
+						"y": 335,
+						"width": 61.87469864750511,
+						"height": 60.18014391113238,
+						"originX": 0.4965277777777778,
+						"originY": 0.5171073094867809,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ArrowDispenser3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 35,
+					"instanceVariables": {
+						"Rate": 0,
+						"Arrow": 1,
+						"Shoot": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 790,
+						"y": 138,
+						"width": 100.39749795787179,
+						"height": 93.56537295266476,
+						"originX": 0.9423298731257209,
+						"originY": 0.47896039603960394,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ArrowButton3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 36,
+					"instanceVariables": {
+						"Button": false,
+						"ButtonSound": true
 					},
 					"behaviors": {},
 					"world": {
-						"x": 962,
-						"y": 813,
-						"width": 83,
-						"height": 83.00000000000001,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 797,
+						"y": 279,
+						"width": 86.30841583245497,
+						"height": 86.71810767976096,
+						"originX": 0.5030120481927711,
+						"originY": 0.4954954954954955,
 						"color": [
 							1,
 							1,
@@ -512,6 +716,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -526,5 +731,6 @@
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
+	"projection": "perspective",
 	"eventSheet": "Event sheet 1"
 }
