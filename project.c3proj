@@ -39,6 +39,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -94,7 +102,8 @@
 			"LazerDispenser2",
 			"LazerButton2",
 			"ArrowDispenser3",
-			"ArrowButton3"
+			"ArrowButton3",
+			"WinText"
 		],
 		"subfolders": []
 	},
@@ -108,7 +117,8 @@
 		"items": [
 			"Level 1",
 			"Level 2",
-			"Level 3"
+			"Level 3",
+			"Win Screen"
 		],
 		"subfolders": []
 	},

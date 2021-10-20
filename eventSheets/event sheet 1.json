@@ -826,9 +826,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 191443205726126,
+							"sid": 645993641005985,
 							"parameters": {
-								"interval-seconds": "0.5"
+								"interval-seconds": "0.75"
 							}
 						}
 					],
@@ -870,9 +870,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 591616525472071,
+							"sid": 592705095758895,
 							"parameters": {
-								"interval-seconds": "0.5"
+								"interval-seconds": "0.75"
 							}
 						}
 					],
@@ -1379,9 +1379,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 746810718767856,
+							"sid": 282326974289256,
 							"parameters": {
-								"interval-seconds": "1"
+								"interval-seconds": "2"
 							}
 						}
 					],
@@ -1535,6 +1535,27 @@
 						}
 					],
 					"sid": 844676080980894
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Laser",
+							"sid": 945250394182306,
+							"parameters": {
+								"object": "Rock"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Rock",
+							"sid": 377137786745561
+						}
+					],
+					"sid": 524056882899089
 				}
 			],
 			"sid": 166756814612212
