@@ -1251,8 +1251,8 @@
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "LazerButton",
-							"sid": 510488776394718,
+							"objectClass": "LazerButton2",
+							"sid": 343044462811692,
 							"parameters": {
 								"instance-variable": "Button2"
 							},
@@ -1291,6 +1291,60 @@
 						}
 					],
 					"sid": 112222993964523
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Mc",
+							"sid": 478724252946010,
+							"parameters": {
+								"object": "ArrowButton3"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ArrowButton3",
+							"sid": 816322480067395,
+							"parameters": {
+								"instance-variable": "Button"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ArrowButton3",
+							"sid": 324250111475403,
+							"parameters": {
+								"instance-variable": "Button",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ArrowDispenser3",
+							"sid": 584586804427958,
+							"parameters": {
+								"instance-variable": "Shoot",
+								"value": "false"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 491222440923516,
+							"parameters": {
+								"audio-file": "ButtonPress2",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"ButtonSound\""
+							}
+						}
+					],
+					"sid": 815387520749064
 				}
 			],
 			"sid": 544695971488682

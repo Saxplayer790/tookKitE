@@ -386,6 +386,38 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "ArrowButton3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 36,
+					"instanceVariables": {
+						"Button": false,
+						"ButtonSound": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 797,
+						"y": 279,
+						"width": 86.30841583245497,
+						"height": 86.71810767976096,
+						"originX": 0.5030120481927711,
+						"originY": 0.4954954954954955,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 592936271042587,
@@ -663,7 +695,7 @@
 					}
 				},
 				{
-					"type": "ArrowButton3",
+					"type": "Rock",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -671,19 +703,43 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 36,
+					"uid": 37,
 					"instanceVariables": {
-						"Button": false,
-						"ButtonSound": true
+						"RockSound": true,
+						"Rock": 1,
+						"RockDestroyed": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"TileMovement": {
+							"properties": {
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 200,
+								"speed-y": 200,
+								"enabled": true,
+								"default-controls": false,
+								"isometric": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
 					"world": {
-						"x": 797,
-						"y": 279,
-						"width": 86.30841583245497,
-						"height": 86.71810767976096,
-						"originX": 0.5030120481927711,
-						"originY": 0.4954954954954955,
+						"x": 285,
+						"y": 343,
+						"width": 61.87469864750511,
+						"height": 60.18014391113238,
+						"originX": 0.4965277777777778,
+						"originY": 0.5171073094867809,
 						"color": [
 							1,
 							1,
